@@ -1,1 +1,18 @@
 # Caesar-Password-Encryption-Project
+
+letear = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+          'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+The_code_word = ""
+encrypt = input("Enter the word you want to encrypt : ").lower()
+kay = int(input("Enter the encryption key : "))
+
+for lettr in encrypt:
+      if lettr in letear:
+        x = letear.index(lettr)
+        z = (x + kay) % 26
+        The_code_word += letear[z]
+      else:
+        The_code_word += lettr  
+
+print(f"This is the code word: {The_code_word}")
